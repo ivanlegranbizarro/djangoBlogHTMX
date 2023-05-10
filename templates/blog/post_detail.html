@@ -4,7 +4,7 @@
 {% endblock title %}
 {% block content %}
     <h2>{{ post.title }}</h2>
-    <p>{{ post.contenido }}</p>
+    <p>{{ post.content|safe }}</p>
     <p>{{ post.autor }}</p>
     <hr>
 {% endblock content %}

@@ -1,19 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
-    Home
+Home
 {% endblock title %}
 {% block content %}
-    <h1>Home</h1>
-    <br />
-    <h2>Listado de posts</h2>
-    <br />
-    {% for post in posts %}
-        <hr />
-        <a href={% url 'blog:post_detail' post.id %}>
-            <h2>{{ post.title }}</h2>
-        </a>
-        <p>{{ post.contenido }}</p>
-        <p>{{ post.autor }}</p>
-        <hr>
-    {% endfor %}
+<div class="row">
+  <div class="col-8">
+    <div class="card">
+      <img src="{% static 'blog/django.jpeg' %}" class="card-img-top" alt="imagen Django">
+      <div class="card-body">
+        <h5 class="card-title">Título del post</h5>
+        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum porro voluptatum quidem, magnam sequi eum doloribus ducimus, molestiae debitis exercitationem ea facere odit perferendis rerum nostrum facilis perspiciatis pariatur alias!</p>
+        <p class="card-text">
+          <small class="text-muted">Publicado en...</small>
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+
+  </div>
+</div>
 {% endblock content %}
